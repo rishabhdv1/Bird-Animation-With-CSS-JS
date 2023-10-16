@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML & CSS Bird Animation</title>
+        <style>
+            .bird{
+                width: 185px;
+                height: 291px;
+                background-image: url("img/1.png");
+                background-repeat: no-repeat;
+                background-position: 0px 0px;
+                /*animation: name duration timing-function delay iteration-count direction fill-mode; */
+                animation: fly 1s steps(10) infinite;
+            }
+            .bird2{
+                width: 150px;
+                height: 150px;
+                background-image: url("img/twitter-bird-sprite.png");
+                background-repeat: no-repeat;
+                background-position: 0px 0px;
+                /*animation: name duration timing-function delay iteration-count direction fill-mode; */
+                animation: fly2 .5s steps(4) infinite;
+                transform:rotateZ(20deg);
+            }
+            @keyframes fly{
+                0%{
+                    background-position: 0px 0px;
+                    left: 0px;
+                }
+                100%{
+                    background-position: -1920px 0px;
+                    left: 100%;
+                }
+            }
+            @keyframes fly2{
+                0%{
+                    background-position: 0px 0px;
+                    left: 0px;
+                }
+                100%{
+                    background-position: -600px 0px;
+                    left: 100%;
+                }
+            }
+            .birdcontainer{
+                position: relative;
+                animation: birdcont 7s linear infinite;
+            }
+            @keyframes birdcont {
+                0%{
+                    left:0%;
+                }
+                100%{
+                    left: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="birdcontainer">
+            <div class="bird"></div>
+            <div class="bird2"></div>
+        </div>
+    </body>
+</html>
